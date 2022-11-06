@@ -23,7 +23,7 @@ ext {
     springCloudVersion = "3.2.7"
     awsLambdaLog4jVersion = "1.5.1"
     awsLambdaJavaEventsVersion = "3.11.0"
-    jacksonVersion = '2.13.4.2'
+    jacksonVersion = '2.12.5'
 }
 
 dependencies {
