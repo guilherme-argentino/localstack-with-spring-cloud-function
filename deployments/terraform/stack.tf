@@ -10,7 +10,7 @@ variable "AWS_REGION" {
 
 variable "JAR_PATH" {
     type    = string
-    default = "build/libs/localstack-sampleproject-all.jar"
+    default = "build/libs/localstack-with-spring-cloud-function-all.jar"
 }
 
 provider "aws" {
