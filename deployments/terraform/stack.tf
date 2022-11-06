@@ -10,7 +10,11 @@ variable "AWS_REGION" {
 
 variable "JAR_PATH" {
     type    = string
-    default = "build/libs/localstack-with-spring-cloud-function-all.jar"
+    default = "../../build/libs/localstack-with-spring-cloud-function-all.jar"
+}
+
+variable "LAMBDA_MOUNT_CWD" {
+    type    = string
 }
 
 provider "aws" {
