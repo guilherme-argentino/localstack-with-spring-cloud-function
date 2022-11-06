@@ -8,7 +8,6 @@ plugins {
 }
 
 group = 'org.localstack.sampleproject'
-version = '1.0-SNAPSHOT'
 sourceCompatibility = 17
 
 tasks.withType(JavaCompile) {
@@ -88,3 +87,11 @@ shadowJar {
 }
 
 assemble.dependsOn shadowJar
+
+// Task to prepare the codebase for hot reloading
+task buildHot(type: Copy) {
+    from zipTree("${project.buildDir}/libs/${project.name}-all.jar")
+    into "${project.buildDir}/hot"
+}
+
+buildHot.dependsOn shadowJar
